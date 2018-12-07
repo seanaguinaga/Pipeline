@@ -10,11 +10,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthTestComponent } from './auth-test/auth-test.component';
+import { DashboardTestComponent } from './dashboard-test/dashboard-test.component';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
+import { DragdropTestComponent } from './dragdrop-test/dragdrop-test.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthTestComponent
+    AuthTestComponent,
+    DashboardTestComponent,
+    DragdropTestComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +30,14 @@ import { AuthTestComponent } from './auth-test/auth-test.component';
     AngularFireModule.initializeApp(environment.firebase, 'pipeline-v01'), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
+    DragDropModule,
   ],
   providers: [
   ],
