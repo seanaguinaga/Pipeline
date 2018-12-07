@@ -9,12 +9,12 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserLoginComponent } from './users/user-login/user-login.component';
+import { AuthTestComponent } from './auth-test/auth-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserLoginComponent
+    AuthTestComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +27,7 @@ import { UserLoginComponent } from './users/user-login/user-login.component';
   ],
   providers: [
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [AuthTestComponent]
 })
 export class AppModule { }
